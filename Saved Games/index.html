@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELF'S - Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- 🔹 Encabezado -->
+    <header>
+        <h1>ELF'S </h1>
+    </header>
+
+    <div class="container">
+
+        <!-- 🔹 Lista de productos -->
+        <section id="listaProductos">
+            <div class="producto">
+                <img src="img/producto1.jpg" alt="Producto 1">
+                <p>Producto 1 - S/ 20.00</p>
+                <button onclick="agregarAlCarrito(1)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/producto2.jpg" alt="Producto 2">
+                <p>Producto 2 - S/ 35.00</p>
+                <button onclick="agregarAlCarrito(2)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/producto3.jpg" alt="Producto 3">
+                <p>Producto 3 - S/ 50.00</p>
+                <button onclick="agregarAlCarrito(3)">Agregar al carrito</button>
+            </div>
+        </section>
+
+        <!-- 🔹 Carrito de compras -->
+        <section id="carrito">
+            <h2>🛒 Carrito de Compras (<span id="contadorCarrito">0</span>)</h2>
+            <div id="contenidoCarrito"></div>
+            <p><strong>Total:</strong> <span id="totalCarrito">S/ 0.00</span></p>
+            <button id="vaciarCarrito">Vaciar Carrito</button>
+        </section>
+
+        <!-- 🔹 Sección de pago con QR -->
+        <section class="pago">
+            <h2>💳 Métodos de Pago</h2>
+            <div class="opciones-pago">
+                <div class="pago-opcion">
+                    <p>📲 Yape</p>
+                    <img src="img/yape.jpg" alt="QR Yape" class="qr">
+                </div>
+                <div class="pago-opcion">
+                    <p>📲 Plin</p>
+                    <img src="img/yape.jpg" alt="QR Plin" class="qr">
+                </div>
+                <div class="pago-opcion">
+                    <p>🏦 Transferencia Bancaria</p>
+                    <p><strong>Cuenta:</strong> 123-456789-01</p>
+                </div>
+            </div>
+            <p> Adjunta tu comprobante:</p>
+            <input type="file" id="comprobante" accept="image/*, .pdf">
+            <button id="confirmarPago">Confirmar Pago</button>
+            <button id="whatsappBtn">Enviar por WhatsApp</button>
+        </section>
+
+    </div>
+
+    <!-- 🔹 Scripts -->
+    <script src="script.js"></script>
+
+</body>
+</html>

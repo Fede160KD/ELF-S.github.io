@@ -1,0 +1,196 @@
+/* 🔹 Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* 🔹 Encabezado */
+header {
+    background: linear-gradient(135deg, #003366, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* 🔹 Productos */
+#listaProductos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* 🔹 Botones */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 🔹 Carrito */
+#carrito {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Estilos para los productos dentro del carrito */
+#contenidoCarrito div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* 🔹 Botón de eliminar en carrito */
+#contenidoCarrito button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: auto;  /* 🔹 Se ajusta al tamaño del contenido */
+}
+
+#contenidoCarrito button:hover {
+    background-color: #c0392b;
+}
+
+/* 🔹 Sección de pago */
+.pago {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pago h2 {
+    font-size: 22px;
+    color: #003366;
+}
+
+/* 🔹 Opciones de pago */
+.opciones-pago {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pago-opcion {
+    width: 220px;
+    padding: 15px;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.pago-opcion:hover {
+    transform: scale(1.05);
+    background: #e9ecef;
+}
+
+/* 🔹 Estilos para QR */
+.qr {
+    width: 140px;
+    height: 140px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 Botón de WhatsApp */
+#whatsappBtn {
+    background-color: #25d366;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#whatsappBtn:hover {
+    background-color: #1da851;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+    .opciones-pago {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pago-opcion {
+        width: 90%;
+    }
+
+    #contenidoCarrito div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #contenidoCarrito button {
+        align-self: flex-end;
+        margin-top: 5px;
+    }
+}
